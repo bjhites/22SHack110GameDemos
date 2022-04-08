@@ -1,6 +1,7 @@
 """This module sets the scene and starts the game loop."""
 
 # Import the pygame library and some event types, such as key presses
+from colorama import Back
 import pygame
 from pygame.locals import (
     K_UP,
@@ -53,7 +54,6 @@ while running:
             elif event.key == K_UP:
                 # TODO call jump method on player
                 ...
-
 
     # TODO Update and render scrolling background
 
