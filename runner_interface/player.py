@@ -15,7 +15,7 @@ class Player(pygame.sprite.Sprite):
 
     def __init__(self, x: int, y: int, width: int, height: int, collision_list: list[pygame.rect.Rect]):
         """Constructor takes x and y as coordinates, height and width for the size and a list of Rects (rectangles) the player could collide with."""
-        # TODO Extend the pygame Sprite class by calling it's constructor with self
+        pygame.sprite.Sprite.__init__(self)
 
     def update(self):
         """This is called every frame to check for collisions with the floor and apply jumping movement."""
@@ -29,7 +29,7 @@ class Player(pygame.sprite.Sprite):
         # TODO Keep player on the screen
     
     def gravity(self):
-        """Turns on the gravity only when the Player object should be falling."""
+        """Turns on the 'gravity' only when the player object should be falling."""
 
     def jump(self):
         """If the Player object is not currently jumping, this method starts a jump by changing the values of is_jumping and is_falling."""

@@ -11,7 +11,7 @@ class Background():
 
     def __init__(self):
         """Contruct scrolling background objects."""
-
+        # TODO Load background image
          
     def update(self):
         """Move the background by moving speed amount."""
