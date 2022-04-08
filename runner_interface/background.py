@@ -6,14 +6,13 @@ import pygame
 class Background():
     image: pygame.surface.Surface
     rect: pygame.rect.Rect
-    x0: int
-    y0: int
-    x1: int 
-    y1: int
+    x: int
+    y: int
     moving_speed: int
 
     def __init__(self):
         """Contruct scrolling background objects."""
+
          
     def update(self):
         """Move the background by moving speed amount."""
