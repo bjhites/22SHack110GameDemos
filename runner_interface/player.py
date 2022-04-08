@@ -6,9 +6,9 @@ from pygame.locals import RLEACCEL
 
 class Player(pygame.sprite.Sprite):
     """The Player extends pygame.sprite.Sprite to take advantage of builtin Sprite methods."""
-    movey: int
     image: pygame.surface.Surface
     rect: pygame.rect.Rect
+    movey: int
     is_jumping: bool
     is_falling: bool
     collision_list: list[pygame.rect.Rect]

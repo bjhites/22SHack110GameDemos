@@ -8,7 +8,6 @@ class Background():
     rect: pygame.rect.Rect
     x: int
     y: int
-    moving_speed: int
 
     def __init__(self):
         """Contruct scrolling background objects."""

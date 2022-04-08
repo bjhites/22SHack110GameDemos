@@ -9,6 +9,7 @@ class Floor(pygame.sprite.Sprite):
     rect: pygame.rect.Rect
     x: int
     y: int
+    
     def __init__(self, x: int, y: int, width: int, height: int):
         """Construct a floor object with position, width, height, and fill it with a color."""
 
