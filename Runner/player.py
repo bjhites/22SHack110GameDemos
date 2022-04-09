@@ -16,6 +16,9 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, x: int, y: int, width: int, height: int, collision_list: list[pygame.rect.Rect]):
         """Constructor takes x and y as coordinates, height and width for the size and a list of Rects (rectangles) the player could collide with."""
         pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load("assets/player.png").convert()
+        self.rect = pygame.rect.Rect(x, y, height, width)
+        self.image.set_colorkey((0, 0, 0), RLEACCEL)
 
     def update(self):
         """This is called every frame to check for collisions with the floor and apply jumping movement."""

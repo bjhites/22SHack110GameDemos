@@ -38,6 +38,7 @@ floor: Floor = Floor(0, SCREEN_HEIGHT - FLOOR_HEIGHT, SCREEN_WIDTH, FLOOR_HEIGHT
 platforms: list[pygame.rect.Rect] = [floor.rect]
 
 # TODO Instantiate player, passing in the position, width, height, and ground collision list
+player: Player = Player(200, SCREEN_HEIGHT - 200, 60, 70, platforms)
 
 # Run the game until the user asks to quit or dies and `running` is set to False
 running = True
@@ -57,12 +58,14 @@ while running:
                 ...
 
     # TODO Update and render scrolling background
+    background.update()
     background.render(screen)
 
     # Render the floor
     floor.render(screen)
 
-    # TODO Update the player sprite
+    # TODO Update and render the player sprite
+    player.render(screen)
 
     # TODO Call gravity on player, so the player falls at the right times
 
