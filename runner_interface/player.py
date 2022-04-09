@@ -36,3 +36,4 @@ class Player(pygame.sprite.Sprite):
 
     def render(self, screen) -> None:
         """Draw surface of player onto the screen at its rect location."""
+        screen.blit(self.image, self.rect)

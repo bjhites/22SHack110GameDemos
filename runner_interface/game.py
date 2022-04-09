@@ -29,12 +29,13 @@ clock = pygame.time.Clock()
 screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 
 # TODO Instantiate the background
+background:Background = Background()
 
 # TODO Instantiate the floor
-
-# TODO Render the floor
+floor: Floor = Floor(0, SCREEN_HEIGHT - FLOOR_HEIGHT, SCREEN_WIDTH, FLOOR_HEIGHT)
 
 # TODO Create a list of ground or platform Rects the player can collide with
+platforms: list[pygame.rect.Rect] = [floor.rect]
 
 # TODO Instantiate player, passing in the position, width, height, and ground collision list
 
@@ -56,6 +57,10 @@ while running:
                 ...
 
     # TODO Update and render scrolling background
+    background.render(screen)
+
+    # Render the floor
+    floor.render(screen)
 
     # TODO Update the player sprite
 
